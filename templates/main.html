@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<style>
+    .logo {
+        text-align: center;
+        text-decoration: none;
+        color:black;
+        background-size: auto;
+        font:bolder;
+        font-style:italic;
+        font-weight: bold;
+        text-shadow: 0px 0px 5px #b393d3, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3,0px 0px 20px #b393d3;
+
+
+    }
+
+    .new {
+        border: 8px solid black;
+        border-radius: 12px;
+        padding: 16px 32px;
+
+    }
+    .center {
+            position: absolute;
+            top: 40%;
+            left: 42%;
+            text-align: center;
+
+   }
+   .center2 {
+            position: absolute;
+            top: 50%;
+            left: 46%;
+   }
+   .button {
+            border: 5px darkblue;
+            color: white;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+    }
+    .button2 {
+            background-color: white; 
+            color: black; 
+            border: 8px solid #008CBA;
+    }
+    .button2:hover {
+            background-color: #008CBA;
+            color: white;
+    }
+    body {
+            background-image: url("https://emailchef.com/wp-content/uploads/2019/06/email-spam-reputation.png");
+
+    }
+    form.transbox {
+            opacity: 0.9;
+            font-weight: bold;
+            margin: 10px;
+            background-color: #ffffff;
+            border: 1px solid black;
+            size: 10px 10px;
+        
+    }
+    form {
+            padding: 20px 20px;
+
+    }
+    .button3 {
+            border:crimson;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            background-color: #008CBA;
+            position: absolute;
+            left: 42%;
+            animation: glowing 1300ms infinite;
+    }
+    @keyframes glowing {
+        0% {
+          background-color: #2ba805;
+          box-shadow: 0 0 5px #2ba805;
+        }
+        50% {
+          background-color: #49e819;
+          box-shadow: 0 0 20px #49e819;
+        }
+        100% {
+          background-color: #2ba805;
+          box-shadow: 0 0 5px #2ba805;
+        }
+      }
+
+</style>
+<html>
+    <head>
+        <meta charset="'utf-8">
+        <meta name="'viewport" content="'width=device-width, initial-scale=1">
+        <title>Legit Mail</title>
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1 class="logo"><a class ="logo" href="{% url 'check_email' %}"> Legit Mail</a></h1>
+            </div>
+        </header>
+        {% block content %}
+
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<form style="text-align:left;" class="transbox">
+    {% for key, value in content.items %}
+    <div class="transbox">
+        
+        <h2>{{ key }}</h2>
+        <h3>* {{ value }}</h3><br>
+        
+    </div>
+    {% endfor %}
+</form>
+
+{% endblock %}

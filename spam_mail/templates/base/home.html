@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<style>
+    .new {
+        border: 2px solid red;
+        border-radius: 12px;
+        padding: 16px 32px;
+
+    }
+    .center {
+            position: absolute;
+            top: 40%;
+            left: 42%;
+            text-align: center;
+   }
+   .center2 {
+            position: absolute;
+            top: 50%;
+            left: 46%;
+   }
+   .button {
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+    }
+    .button2 {
+            background-color: white; 
+            color: black; 
+            border: 2px solid #008CBA;
+    }
+    .button2:hover {
+            background-color: #008CBA;
+            color: white;
+    }
+
+</style>
+<html>
+    <head>
+        <meta charset="'utf-8">
+        <meta name="'viewport" content="'width=device-width, initial-scale=1">
+        <title>Legit-mail</title>
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1 style="text-align: center;">Legit-mail</h1>
+            </div>
+        </header>
+        <div>
+            <form action={% url 'output' %} method="POST">
+                {% csrf_token %}
+                <input name="Email" placeholder="Type your email here" type="email" class="new center"></input>
+                <br><br>
+                <button class="button button2 center2" type="submit" value="Submit">Submit</button>
+                <div>
+                    {% for i in context %}
+                        <div>
+                            <h3>{{ i }},{{ i.text }}</h3>
+                        </div>
+                    {% endfor %}
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

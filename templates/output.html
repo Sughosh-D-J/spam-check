@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<form style="text-align:left;" class="transbox">
+    {% for key, value in content.items %}
+    <div class="transbox">
+        
+        <h3>{{ key }} :: {{ value }}</h3>
+        
+    </div>
+    {% endfor %}
+</form>
+<a href="{% url 'details' %}"><button  class="button3" type="submit" value="Submit">Know what it means..</button></a>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<form action="{% url 'output' %}" method="POST">
+    {% csrf_token %}
+    <input name="Email" placeholder="Type the email here" type="email" class="new center"></input>
+    <br><br>
+    <button class="button button2 center2" type="submit" value="Submit">Validate</button>
+</form>
+
+{% endblock %}
+
