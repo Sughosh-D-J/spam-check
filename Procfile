@@ -1,1 +1,0 @@
-web gunicorn spam_mail.wsgi:application --log-file -
